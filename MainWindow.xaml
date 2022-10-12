@@ -20,6 +20,9 @@
             <TabItem Header="Calculator">
                 <local:CalculatorView/>
             </TabItem>
+            <TabItem Header="Quiz">
+                <local:QuizView/>
+            </TabItem>
         </TabControl>
         
 
