@@ -54,5 +54,11 @@ namespace TextEditor
                 range.Save(fileStream, DataFormats.Rtf);
             }
         }
+
+        private void Size_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextField.FontSize = double.Parse(Size.Text);
+        }
+
     }
 }

@@ -12,6 +12,7 @@
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" />
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" />
+
     </Window.CommandBindings>
     <Grid Background="BlanchedAlmond">
         <Grid.ColumnDefinitions>
@@ -33,9 +34,60 @@
                 Margin="3"
                 Command="ApplicationCommands.Save"
                 Content="Save" />
+            <TextBox
+            x:Name="Size"
+            Width="50"
+            Height="20"
+            IsEnabled="True" 
+            Text="{Binding FontSize,Mode=TwoWay}"
+        
+        ></TextBox>
+
+            <Button
+                x:Name="Submit"
+                Width="70"
+                Height="20"
+                Content="Submit"
+                
+                
+            />
+
+
+            <ToggleButton
+                x:Name="Bold"
+                Width="20"
+                Height="20"
+                Content="B"
+                Command="EditingCommands.ToggleBold" 
+                FontWeight="Bold"
+               
+            />
+          
+            <ToggleButton
+                x:Name="Italic"
+                Width="20"
+                Height="20"
+                Content="I"
+                Command="EditingCommands.ToggleItalic" 
+                FontStyle="Italic"
+              
+            />
+            <ToggleButton
+                x:Name="Underline"
+                Width="20"
+                Height="20"
+                Content="U"
+                Command="EditingCommands.ToggleUnderline" 
+                
+/>
+           
+
+
+
         </ToolBar>
         <RichTextBox
             x:Name="TextField"
+            FontSize="{Binding FontSize, Mode=OneWay}"
             Grid.Row="1"
             Grid.Column="1" />
     </Grid>
