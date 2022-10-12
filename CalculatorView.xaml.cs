@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,14 +45,38 @@ namespace TextEditor
         private void SumButton_Click(object sender, RoutedEventArgs e)
         {
             var expression = MinText.Text;
-
-            var numbers = expression.Split('+');
-            var num1 = int.Parse(numbers[0]);
-            var num2 = int.Parse(numbers[1]);
-
-            var sum = num1 + num2;
+            double sum=0;
+            var numbers = expression.Split('+','-','x','/');
+            var num1 = double.Parse(numbers[0]);
+            var num2 = double.Parse(numbers[1]);
+            if (expression.Contains('+'))
+            {
+                sum = num1 + num2;
+            }
+            else if (expression.Contains('-'))
+            {
+                sum = num1 - num2;
+            }
+            else if (expression.Contains('x'))
+            {
+                sum = num1 * num2;
+            }
+            else if (expression.Contains('/'))
+            {
+                sum = num1 / num2;
+            }
 
             MinText.Text = $"{sum}";
         }
+
+        private void DelButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (e.Source is Button button)
+            {
+                MinText.Text=MinText.Text.Remove(MinText.Text.Length-1);
+            }
+        }
+
+      
     }
 }

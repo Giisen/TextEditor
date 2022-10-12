@@ -80,9 +80,9 @@
 />
             <ComboBox
                x:Name="FontStyle"
-               Width="75" 
+               Width="105" 
                Height="20"
-                ItemsSource="{Binding FontFamilies, Mode=OneWay}"
+               ItemsSource="{Binding FontFamilies, Mode=OneWay}"
                SelectedItem="{Binding FontFamily, Mode=TwoWay}"
                />
 

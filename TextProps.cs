@@ -12,6 +12,10 @@ public class TextProps
     {
         new ("Consolas"),
         new ("Arial"),
-        new ("Times New Roman")
+        new ("Times New Roman"),
+        new ("Comic Sans MS"),
+        new ("Cordia New"),
+        new ("Georgia")
+
     };
 }
