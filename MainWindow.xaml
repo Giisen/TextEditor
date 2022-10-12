@@ -80,7 +80,12 @@
                 Command="EditingCommands.ToggleUnderline" 
                 
 />
-           
+           <ComboBox
+               x:Name="FontStyle"
+               Width="75" 
+               Height="20"
+
+               />
 
 
 
