@@ -55,10 +55,10 @@ namespace TextEditor
         //    }
         //}
 
-        private void Size_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            TextField.FontSize = double.Parse(Size.Text);
-        }
+        //private void Size_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    TextField.FontSize = double.Parse(Size.Text);
+        //}
 
     }
 }

@@ -37,6 +37,7 @@
             Height="20"
             IsEnabled="True" 
             Text="{Binding FontSize,Mode=TwoWay}"
+            
         
         ></TextBox>
 
@@ -82,7 +83,7 @@
                Width="75" 
                Height="20"
                 ItemsSource="{Binding FontFamilies, Mode=OneWay}"
-               SelectedItem="{Binding FontFamily, Mode=OneWay}"
+               SelectedItem="{Binding FontFamily, Mode=TwoWay}"
                />
 
 
@@ -91,6 +92,7 @@
         <RichTextBox
             x:Name="TextField"
             FontSize="{Binding FontSize, Mode=OneWay}"
+            FontFamily="{Binding FontFamily, Mode=OneWay}"
             Grid.Row="1"
             Grid.Column="1" />
     </Grid>
