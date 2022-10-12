@@ -20,9 +20,22 @@ namespace TextEditor
     /// </summary>
     public partial class QuizView : UserControl
     {
+
+        private readonly string defaultText = String.Empty;
         public QuizView()
         {
             InitializeComponent();
+            defaultText = "Vem är bäst?";
+            Fråga.Text = defaultText;
+        }
+
+
+        private void click_Next(object sender, RoutedEventArgs e)
+        {
+            if (e.Source is Button btn)
+            {
+                Fråga.Text += defaultText;
+            }
         }
     }
 }
