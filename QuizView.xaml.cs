@@ -21,6 +21,7 @@ namespace TextEditor
     public partial class QuizView : UserControl
     {
 
+
         private readonly string defaultText = String.Empty;
         public QuizView()
         {
@@ -34,8 +35,32 @@ namespace TextEditor
         {
             if (e.Source is Button btn)
             {
-                Fråga.Text += defaultText;
+                Fråga.Text = "";
+                Fråga.Text = defaultText;
             }
+        }
+
+        private void One_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (e.Source is Button btn)
+            {
+                Fråga.Text = "Rätt";
+            }
+        }
+
+        private void Two_OnClick(object sender, RoutedEventArgs e)
+        {
+            Fråga.Text = "Fel";
+        }
+
+        private void Three_OnClick(object sender, RoutedEventArgs e)
+        {
+            Fråga.Text = "Fel";
+        }
+
+        private void Four_OnClick(object sender, RoutedEventArgs e)
+        {
+            Fråga.Text = "Fel";
         }
     }
 }
